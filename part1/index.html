@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css" />
+  <title>Part 1</title>
+</head>
+<body>
+  <ul>
+    <li><a class ="home" href="index.html">Home</a></li>
+    <li><a href="/Baraja/index.html">Part 2</a></li>
+  </ul>
+<p data-height="268" data-theme-id="0" data-slug-hash="WwExpB" data-default-tab="result" data-user="amtab" class="codepen">See the Pen <a href="http://codepen.io/amtab/pen/WwExpB/">WwExpB</a> by Ayana Taburn (<a href="http://codepen.io/amtab">@amtab</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
+<h2>About this code</h2>
+<p>The Javascript in this code works by telling the Faq div, that was made in the HTML and contains the question, to find the faqs_answer_container. When the Faq div containing the question is clicked, Jquery then searches for the answer. </p>
+<p>$('.faq_question').click(function() {
+
+      if ($(this).parent().is('.open')) {
+        $(this).closest('.faq').find('.faq_answer_container').animate({
+          'height': '0'
+        }, 500); </p>
+      <p> This code is telling that if the Fab_Question is clicked open and find the Faq answer and apply the animation.</p>
+
+ <p>The animate function then allows the answer to be revealed by changing the height of the faqs_answer_container which then reveals the answer.  This function: </p> <p>animate({
+          'height': '0'
+        }, 500);</p>
+<p>means that when clicked the second time, the height will change back to zero completly hiding the answer. If this number was changed to anything higher than zero, the answer would not be hidden completely and would show more or less depending on what number it was set to. The 500 determines the speed in which the animation happens.</p>
+    <p>  } else {
+        var newHeight = $(this).closest('.faq').find('.faq_answer').height() + 'px';
+        $(this).closest('.faq').find('.faq_answer_container').animate({
+          'height': newHeight
+        }, 500); </p>
+        <p>This code is telling it to close the .faq question, by removing the class open and setting the newHeight zero. </p>
+
+</body>
+</html>
